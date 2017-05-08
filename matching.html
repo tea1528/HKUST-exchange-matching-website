@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Match survey</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- Font Awesome's Brand-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style>
+    body{
+      padding-top: 40px;
+    }
+    .col-sm-2{
+      right: 15px;
+    }
+    #europe{
+      width:70%;
+      height:70%;
+      padding-top: 100px;
+    }
+    .col-lg-6{
+      right:20px;
+    }
+  </style>
+</head>
+
+<!-- Navbar -->
+<body data-spy="scroll" data-target="#my-navbar">
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a href="index.html" class="navbar-brand">EXCHANGE MATCHING</a>
+      </div><!-- Navbar Header-->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+
+      <!-- <a href="" class="btn btn-warning navbar-btn navbar-right">Download Now</a> -->
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">About</a>
+            <li><a href="matching.html">Matching</a>
+            <li><a href="comment.html">Review</a>
+          <li><a href="index.html">More info</a>
+        </ul>
+      </div>
+    </div><!-- End Container-->
+  </nav><!-- End navbar -->
+
+  <div class="container">
+    <div class="page-header" id="matching">
+      <h2>Match for you <br><small>Find the perfect match for you!</small></h2>
+    </div>
+    <form action = "survey_php.php" method = "POST">
+		<input type="hidden" name="numOfQuestion" value="4">
+
+    <div class="col-lg-6">
+
+
+    <div class="container">
+      1. Which semester are you applying to? </br>
+  		<input type="hidden" name="question[]" value="Which semester are you applying to?">
+  		<input type="hidden" name="answer_type[]" value="choose one option">
+  		<input type="radio" name="answer1" value="Fall Semester" required checked> Fall Semester
+  		<input type="radio" name="answer1" value="Spring Semester" > Spring Semester<br>
+  		<br>
+    </div>
+
+    <div class="container">
+      2. Which school/program are you from? </br>
+  		<input type="hidden" name="question[]" value="Which school/program are you from?">
+  		<input type="hidden" name="answer_type[]" value="choose one option">
+  		<input type="radio" name="answer2" value="School of Engineering" required checked> School of Engineering</br>
+  		<input type="radio" name="answer2" value="School of Science"> School of Science</br>
+  		<input type="radio" name="answer2" value="School of Business and Management"> School of Business and Management</br>
+  		<input type="radio" name="answer2" value="School of Humanities and Social Science"> School of Humanities and Social Science</br>
+  		<input type="radio" name="answer2" value="Interdisciplinary Program"> Interdisciplinary Program<br>
+  		<br>
+    </div>
+
+    <div class="container">
+  		3. Which countries are you interested? (Western Europe) </br>
+      <div class="col-sm-2">
+      <input type="hidden" name="question[]" value="Which countries are you interested?">
+  		<input type="hidden" name="answer_type[]" value="choose multiple option">
+  		<input type="checkbox" name="answer3[]" value="Austria"> Austria<br>
+    		<input type="checkbox" name="answer3[]" value="Belgium"> Belgium<br>
+    		<input type="checkbox" name="answer3[]" value="Denmark"> Denmark<br>
+    		<input type="checkbox" name="answer3[]" value="Finland"> Finland<br>
+    		<input type="checkbox" name="answer3[]" value="France"> France<br>
+        <input type="checkbox" name="answer3[]" value="Germany"> Germany<br>
+        <input type="checkbox" name="answer3[]" value="Ireland"> Ireland<br>
+        <input type="checkbox" name="answer3[]" value="Italy"> Italy<br>
+        <br>
+      </div>
+      <div class="col-sm-3">
+        <input type="checkbox" name="answer3[]" value="The Netherlands"> The Netherlands<br>
+        <input type="checkbox" name="answer3[]" value="Norway"> Norway<br>
+        <input type="checkbox" name="answer3[]" value="Portugal"> Portugal<br>
+        <input type="checkbox" name="answer3[]" value="Spain"> Spain<br>
+        <input type="checkbox" name="answer3[]" value="Sweden"> Sweden<br>
+        <input type="checkbox" name="answer3[]" value="Switzerland"> Switzerland<br>
+        <input type="checkbox" name="answer3[]" value="United Kingdom"> United Kingdom<br>
+        <br>
+        <br>
+      </div>
+
+    </div>
+
+
+      <div class="container">
+    		4. Which countries are you interested? (Eastern Europe) </br>
+        <input type="checkbox" name="answer3[]" value="Czech Republic"> Czech Republic<br>
+        <input type="checkbox" name="answer3[]" value="Hungary"> Hungary<br>
+        <input type="checkbox" name="answer3[]" value="Poland"> Poland<br>
+        <input type="checkbox" name="answer3[]" value="Russia"> Russia<br>
+    		<br>
+      </div>
+
+      <div class="container">
+    		5. Which countries are you interested? (America) </br>
+          <input type="checkbox" name="answer3[]" value="Canada"> Canada<br>
+      	  <input type="checkbox" name="answer3[]" value="United States"> United States<br>
+      		<input type="checkbox" name="answer3[]" value="Brazil"> Brazil<br>
+      		<input type="checkbox" name="answer3[]" value="Mexico"> Mexico<br>
+    		  <br>
+      </div>
+
+      <div class="container">
+    		6. Which countries are you interested? (Asia) </br>
+      		<input type="checkbox" name="answer3[]" value="China"> China<br>
+    		  <input type="checkbox" name="answer3[]" value="Japan"> Japan<br>
+      		<input type="checkbox" name="answer3[]" value="Philippines"> Philippines<br>
+      		<input type="checkbox" name="answer3[]" value="Singapore"> Singapore<br>
+          <input type="checkbox" name="answer3[]" value="Singapore"> South Korea<br>
+      		<input type="checkbox" name="answer3[]" value="Taiwan"> Taiwan<br>
+      		<input type="checkbox" name="answer3[]" value="Thailand"> Thailand<br>
+        	<br>
+      </div>
+
+      <div class="container">
+
+    		7. Which countries are you interested? (Others) </br>
+    		<input type="checkbox" name="answer3[]" value="Australia"> Australia<br>
+    		<input type="checkbox" name="answer3[]" value="New Zealand"> New Zealand<br>
+        <input type="checkbox" name="answer3[]" value="Israel"> Israel<br>
+    		<input type="checkbox" name="answer3[]" value="Turkey"> Turkey<br>
+    		<br>
+      </div>
+
+      <div class="container">
+    		8. Do you have English test score? <br>
+    		<input type="hidden" name="question[]" value="Do you have English test score?">
+  		  <input type="hidden" name="answer_type[]" value="choose one option">
+    		<input type="radio" name="answer4" value="Yes" required checked> Yes <br>
+  		  <input type="radio" name="answer4" value="No" > No <br>
+  		  <br>
+      </div>
+
+      <div class="container">
+        <div class="btn-group">
+        <input class="btn btn-lg btn-success" type="submit" value="View your match!">
+      </div>
+      </div>
+
+	</form>
+    </div>
+    <div class="col-lg-6">
+      <img src="../img/europe.jpg" id="europe" alt="">
+    </div>
+
+  </div>
+
+
+
+  <footer>
+    <hr>
+      <div class="container text-center">
+        <ul class="list-inline">
+         <div class="container text-center">Share your result to your friends!</div>
+          <a href="https://www.facebook.com/"><i class="fa fa-facebook-square fa-3x social"></i></a>
+          <a href="https://twitter.com/"><i class="fa fa-twitter-square fa-3x social"></i></a>
+          <a href="https://plus.google.com/"><i class="fa fa-google-plus-square fa-3x social"></i></a>
+          <a href="mailto:lixin@connect.ust.hk"><i class="fa fa-envelope-square fa-3x social"></i></a>
+        </ul>
+
+      <p>&copy; Copyright @2017 COMP2021 Group A-team</p>
+
+
+    </div><!-- end Container-->
+
+
+  </footer>
+
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
